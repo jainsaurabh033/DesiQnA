@@ -43,7 +43,7 @@
   flex: 1;
 }
 
-.post__question > .post__btnAnswer {
+.post__btnAnswer {
   margin-left: auto;
   cursor: pointer;
   padding: 7px;

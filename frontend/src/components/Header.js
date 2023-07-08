@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { MdFeaturedPlayList, MdAssignmentTurnedIn } from "react-icons/md";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { IoMdNotifications } from "react-icons/io";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { RxAvatar } from "react-icons/rx";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { MdPeopleAlt, MdExpandMore } from "react-icons/md";
 import "./css/Header.css";
+import { Modal } from "react-responsive-modal";
+import "react-responsive-modal/styles.css";
 
 const Header = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [inputUrl, setInputUrl] = useState("");
+  const close = <AiFillCloseCircle />;
+
   return (
     <div className="header">
       <div className="header-content">
@@ -42,7 +50,76 @@ const Header = () => {
         <div className="header-Rem">
           <RxAvatar />
         </div>
-        <button>Add question</button>
+        <button onClick={() => setIsModalOpen(true)}>Add Question</button>
+        <Modal
+          open={isModalOpen}
+          closeIcon={close}
+          onClose={() => setIsModalOpen(false)}
+          closeOnEsc
+          center
+          closeOnOverlayClick={false}
+          styles={{
+            overlay: {
+              height: "auto",
+            },
+          }}
+        >
+          <div className="modal__title">
+            <h5>Add Question</h5>
+            <h5>Share Link</h5>
+          </div>
+          <div className="modal__info">
+            <RxAvatar className="avatar" />
+            <div className="modal__scope">
+              <MdPeopleAlt />
+              <p>Public</p>
+              <MdExpandMore />
+            </div>
+          </div>
+          <div className="modal__Field">
+            <input
+              type="text"
+              placeholder="Start your question with what, How, why, etc"
+            />
+            <div
+              styles={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <input
+                type="text"
+                value={inputUrl}
+                onChange={(e) => setInputUrl(e.target.value)}
+                style={{
+                  margin: "5px 0",
+                  border: "1px solid lightgray",
+                  padding: "10px",
+                  outline: "2px solid #000",
+                }}
+                placeholder="Optional: include a link that gives on text"
+              />
+              {inputUrl !== "" && (
+                <img
+                  src={inputUrl}
+                  style={{
+                    height: "40vh",
+                    objectFit: "contain",
+                  }}
+                  alt="display image"
+                />
+              )}
+            </div>
+          </div>
+          <div className="modal__buttons">
+            <button className="cancel" onClick={() => setIsModalOpen(false)}>
+              Cancel
+            </button>
+            <button type="submit" className="add">
+              Submit
+            </button>
+          </div>
+        </Modal>
       </div>
     </div>
   );

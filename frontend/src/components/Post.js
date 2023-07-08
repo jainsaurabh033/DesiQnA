@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/Post.css";
 import { RxAvatar } from "react-icons/rx";
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
 import { IoMdRepeat } from "react-icons/io";
 import { BsFillChatLeftDotsFill, BsFillShareFill } from "react-icons/bs";
 import { FiMoreHorizontal } from "react-icons/fi";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { Modal } from "react-responsive-modal";
+import "react-responsive-modal/styles.css";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const Post = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const close = <AiFillCloseCircle />;
   return (
     <div className="post">
       <div className="post__info">
@@ -16,7 +24,44 @@ const Post = () => {
       </div>
       <div className="post__body">
         <p>This is test question</p>
-        <button className="post__btnAnswer">Answer</button>
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="post__btnAnswer"
+        >
+          Answer
+        </button>
+        <Modal
+          open={isModalOpen}
+          closeIcon={close}
+          onClose={() => setIsModalOpen(false)}
+          closeOnEsc
+          center
+          closeOnOverlayClick={false}
+          styles={{
+            overlay: {
+              height: "auto",
+            },
+          }}
+        >
+          <div className="modal__question">
+            <h1>This is test question.</h1>
+            <p>
+              asked by <span className="name">Username</span>{" "}
+              <span className="name">on timestamp </span>
+            </p>
+          </div>
+          <div className="modal__answer">
+            <ReactQuill placeholder="Enter your answer" />
+          </div>
+          <div className="modal__button">
+            <button className="cancel" onClick={() => setIsModalOpen(false)}>
+              Cancel
+            </button>
+            <button type="submit" className="add">
+              Add Answer
+            </button>
+          </div>
+        </Modal>
       </div>
       <div className="post__footer">
         <div className="post__footerAction">
