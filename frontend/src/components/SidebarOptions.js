@@ -7,7 +7,7 @@ function SidebarOptions() {
     <div className="sidebarOptions">
       <div className="sidebarOption">
         <img
-          src="https://media.istockphoto.com/id/1012501180/photo/old-globe-on-bookshelf-background.jpg?s=612x612&w=0&k=20&c=HOAI1Yti25ekVOK4u1d8jkav2OzkHk5TrN6nTFCUdLQ="
+          src="https://thumbs.dreamstime.com/b/history-etched-old-paper-scroll-feather-quill-compass-30890377.jpg"
           alt=""
         />
         <p>History</p>
@@ -15,7 +15,7 @@ function SidebarOptions() {
 
       <div className="sidebarOption">
         <img
-          src="https://blog.robotiq.com/hubfs/Photo%20by%20rawpixel.com%20from%20Pexels.jpg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaBpm6a5I_AY5oSx-DxIi_Ej6vr1yssJNyxwyhHkuhMg&s"
           alt=""
         />
 
@@ -23,7 +23,7 @@ function SidebarOptions() {
       </div>
       <div className="sidebarOption">
         <img
-          src="https://www.udc.edu/social-udc/wp-content/uploads/sites/24/2018/03/Importance-of-Psychology_UDC.jpg"
+          src="https://th.bing.com/th/id/OIP.hbOLD_7GHofSYexpO7gdpwHaE8?w=237&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
           alt=""
         />
         <p>Psychology</p>
@@ -39,7 +39,7 @@ function SidebarOptions() {
 
       <div className="sidebarOption">
         <img
-          src="https://img.freepik.com/free-vector/musical-notes-frame-with-text-space_1017-32857.jpg?w=2000"
+          src="https://th.bing.com/th/id/OIP.Qc97e9HGTmTzH3pEXFJjAAHaEK?w=277&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
           alt=""
         />
         <p>Music</p>
@@ -55,7 +55,7 @@ function SidebarOptions() {
 
       <div className="sidebarOption">
         <img
-          src="https://prod-upp-image-read.ft.com/4bddfb6e-fa84-11e6-9516-2d969e0d3b65"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvrFjF9_nHx_NTeOxa4TMqCpd10Eo2HCdvDA&usqp=CAU"
           alt=""
         />
         <p>Health</p>
@@ -63,7 +63,7 @@ function SidebarOptions() {
 
       <div className="sidebarOption">
         <img
-          src="https://st3.depositphotos.com/1064045/15061/i/600/depositphotos_150614902-stock-photo-unusual-cinema-concept-3d-illustration.jpghttps://st3.depositphotos.com/1064045/15061/i/600/depositphotos_150614902-stock-photo-unusual-cinema-concept-3d-illustration.jpg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFBjOtQobnYCi9eVYWTbp7vQxwJwOALJpfSQ&usqp=CAU"
           alt=""
         />
         <p>Movies</p>
@@ -85,7 +85,7 @@ function SidebarOptions() {
         <p>Education</p>
       </div>
       <div className="sidebarOption">
-        <IoMdAdd />
+        <IoMdAdd className="add" />
         <p className="text">Discover Spaces</p>
       </div>
     </div>

@@ -7,11 +7,12 @@ router.post("/", async (req, res) => {
   console.log(req.body);
 
   try {
-    const { questionName, questionUrl } = req.body;
+    const { questionName, questionUrl, user } = req.body;
     await questionDB
       .create({
         questionName,
         questionUrl,
+        user,
       })
       .then(() => {
         res.status(201).send({

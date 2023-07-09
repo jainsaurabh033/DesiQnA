@@ -3,9 +3,9 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Feed from "./Feed";
 import Widget from "./Widget";
-import "./css/Quora.css";
+import "./css/Home.css";
 
-const Quora = () => {
+const Home = () => {
   return (
     <div className="quora">
       <Header />
@@ -20,4 +20,4 @@ const Quora = () => {
   );
 };
 
-export default Quora;
+export default Home;

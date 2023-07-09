@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./css/Feed.css";
-import QuoraBox from "./QuoraBox";
+import FeedBox from "./FeedBox";
 import Post from "./Post";
 import axios from "axios";
 
@@ -20,7 +20,7 @@ const Feed = () => {
 
   return (
     <div className="feed">
-      <QuoraBox />
+      <FeedBox />
       {posts.map((post, index) => (
         <Post post={post} key={index} />
       ))}

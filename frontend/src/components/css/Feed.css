@@ -3,3 +3,10 @@
   flex-direction: column;
   flex: 0.6;
 }
+
+.avatar {
+  object-fit: contain;
+  height: 40px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
