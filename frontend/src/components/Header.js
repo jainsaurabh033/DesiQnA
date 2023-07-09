@@ -10,11 +10,39 @@ import { MdPeopleAlt, MdExpandMore } from "react-icons/md";
 import "./css/Header.css";
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
+import axios from "axios";
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputUrl, setInputUrl] = useState("");
+  const [question, setQuestion] = useState("");
   const close = <AiFillCloseCircle />;
+
+  const handleSubmit = async () => {
+    if (question !== "") {
+      const config = {
+        headers: {
+          "content-type": "application/json",
+        },
+      };
+
+      const body = {
+        questionName: question,
+        questionUrl: inputUrl,
+      };
+      await axios
+        .post("http://localhost:5000/api/questions", body, config)
+        .then((res) => {
+          console.log(res.data);
+          alert(res.data.message);
+          window.location.reload();
+        })
+        .catch((e) => {
+          console.log(e);
+          alert("Error in adding question");
+        });
+    }
+  };
 
   return (
     <div className="header">
@@ -78,6 +106,8 @@ const Header = () => {
           </div>
           <div className="modal__Field">
             <input
+              value={question}
+              onChange={(e) => setQuestion(e.target.value)}
               type="text"
               placeholder="Start your question with what, How, why, etc"
             />
@@ -115,8 +145,8 @@ const Header = () => {
             <button className="cancel" onClick={() => setIsModalOpen(false)}>
               Cancel
             </button>
-            <button type="submit" className="add">
-              Submit
+            <button onClick={handleSubmit} type="submit" className="add">
+              Add Question
             </button>
           </div>
         </Modal>
