@@ -28,7 +28,7 @@ DesiQnA is question and answer platform where someone ask question and other wil
 - Add/delete question
 - Answer question
 - firebase google Authentication
-- filtered Post 
+- filtered Posts
 - Avatar
 
 
