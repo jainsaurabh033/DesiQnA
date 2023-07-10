@@ -67,7 +67,11 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <h1 className="Title">Desi QnA</h1>
+        {/* <h1 className="Title">Desi QnA</h1> */}
+        <img
+          src="https://th.bing.com/th/id/OIP.eXvGGCmYdvMAzY7EASI61gHaFD?w=231&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7https://th.bing.com/th/id/OIP.eXvGGCmYdvMAzY7EASI61gHaFD?w=231&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+          alt="logo"
+        />
         <div className="header-content">
           <div className="header-icons">
             <div className="header-icon">

@@ -5,6 +5,10 @@
   padding: 20px 10px;
 }
 
+.header > img {
+  height: 60px;
+}
+
 .header-content {
   display: flex;
   align-items: center;
@@ -15,7 +19,7 @@
 }
 
 .header-icons {
-  margin-left: 50%;
+  margin-left: 40%;
   display: flex;
 }
 
