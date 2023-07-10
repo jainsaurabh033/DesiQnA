@@ -8,7 +8,7 @@ const Feed = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/questions")
+      .get("https://desi-qn-a.vercel.app/api/questions")
       .then((res) => {
         console.log(res.data);
         setPosts(res.data.reverse());

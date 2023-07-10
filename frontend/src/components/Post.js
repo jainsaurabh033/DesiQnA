@@ -49,7 +49,7 @@ const Post = ({ post }) => {
         user,
       };
       await axios
-        .post("http://localhost:5000/api/answers", body, config)
+        .post("https://desi-qn-a.vercel.app/api/answers", body, config)
         .then((res) => {
           console.log(res.data);
           alert("Answer added successfully");
