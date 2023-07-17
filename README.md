@@ -1,5 +1,5 @@
 # DesiQnA
-DesiQnA is question and answer platform where someone ask question and other will answer them with their knowledge.
+DesiQnA is question and answer platform where anyone can ask question and other will answer them with their knowledge.
 
 <div align='center'>
 
